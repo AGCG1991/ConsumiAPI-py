@@ -6,12 +6,15 @@ Te puedes autentificar rellenando un formulario de forma manual o utilizando una
 
 import requests
 #El id no debería estar ahí si no en variables de entorno o en algún sitio seguro
-client_id = '3cc3867780b35bc8fdff'
-client_secret = '0044b601734f7b8199d40f2c76e9cfffd34d0174'
-##https://github.com/login/oauth/authorize?client_id=3cc3867780b35bc8fdff&scope
+client_id = 'd267134110a0483ccd1b'
+client_secret = 'c79e0948a4b2152999d6acc3686a295b0e992461'
+##https://github.com/login/oauth/authorize?client_id=d267134110a0483ccd1bfdff&scope
+"""
+El token tiene una duración de 2 h normalmente
+"""
 
 #Creo una variable CODE, con el hash que se genera al validarme con mi cuenta de github
-code ='9025bf303e921eb5b4cb'
+code ='c9b990916ebdf833fa34'
 
 if __name__ == '__main__' :
 
@@ -28,3 +31,5 @@ if __name__ == '__main__' :
         access_token = response_json['access_token']
         print(access_token)
         #OJO, la sesión caduca y hay que cambiar el code
+
+        #El access_token que nos devuelve es 3b972583959557add79748369d8ff0d8533e3b1e
